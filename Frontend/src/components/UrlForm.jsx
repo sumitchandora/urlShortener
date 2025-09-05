@@ -23,15 +23,15 @@ export const UrlForm = () => {
 }
 
 
-  const [copied, setCopied] = useState(false);
-  const handleCopy = () => {
-    navigator.clipboard.writeText(shorturl?.shortUrl);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000); // Reset after 2 seconds
-  };
+const [copied, setCopied] = useState(false);
+const handleCopy = () => {
+  navigator.clipboard.writeText(shorturl?.shortUrl);
+  setCopied(true);
+  setTimeout(() => setCopied(false), 2000); // Reset after 2 seconds
+};
 
 
-  return (
+return (
     <div className="p-6 max-w-4xl mx-auto">
       <div className="space-y-4" >
         <label>Enter Your URL</label>

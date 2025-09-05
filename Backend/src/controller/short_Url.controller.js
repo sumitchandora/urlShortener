@@ -16,7 +16,8 @@ export const createShortUrl = wrapAsync( async (req,res,next)=>{
         res.status(200).json({shortUrl:"Url Exists"})
     }
     else {
-        res.status(200).json({shortUrl :  shortUrl});
+        console.log("ELSE:---", shortUrl)
+        res.status(200).json({shortUrl : process.env.APP_URL + shortUrl});
         }
     }
 )
